@@ -6,7 +6,7 @@
 
 using namespace std;
 
-const int n = 1000000000;
+const int n = 10000000;
 bool numbersTable[n + 1];
 
 vector<int> V;
@@ -119,6 +119,7 @@ int main()
 {
 	liczSekwencyjnie();
 
+	omp_set_num_threads(4);
 	V.clear();
 	liczFunkcyjnie();
 	
